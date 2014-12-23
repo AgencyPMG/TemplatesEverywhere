@@ -30,7 +30,7 @@ add_action('init', function () {
 Then create some template files in your theme! These are normal PHP files but
 they have a header in the format *{post_type} template: {template name}*.
 
-```
+```php
 <?php
 /**
  * some-template.php
@@ -38,6 +38,13 @@ they have a header in the format *{post_type} template: {template name}*.
  * some_type template: this is a custom template
  */
 ```
+
+With those two things in place, Templates Everywhere will show your new custom
+templates in an admin area meta box.
+
+![The Meta Box](https://github.com/AgencyPMG/TemplatesEverywhere/blob/master/screenshot1.png)
+
+![The Meta Box](https://github.com/AgencyPMG/TemplatesEverywhere/blob/master/screenshot2.png)
 
 ## FAQs
 
