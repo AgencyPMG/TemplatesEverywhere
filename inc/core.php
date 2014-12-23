@@ -14,6 +14,8 @@ function pmg_templateseverywhere_load()
 {
     if (is_admin()) {
         TE\Admin::init();
+    } else {
+        TE\Frontend::init();
     }
 }
 
