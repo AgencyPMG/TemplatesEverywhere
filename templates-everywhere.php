@@ -38,7 +38,8 @@
 !defined('ABSPATH') && exit;
 
 require_once __DIR__.'/inc/Finder/TemplateFinder.php';
-require_once __DIR__.'/inc/Finder/ThemeTemplateFinder.php';
+require_once __DIR__.'/inc/Finder/ThemeFinder.php';
+require_once __DIR__.'/inc/Finder/CachingFinder.php';
 require_once __DIR__.'/inc/Hooks.php';
 require_once __DIR__.'/inc/Admin.php';
 require_once __DIR__.'/inc/Frontend.php';

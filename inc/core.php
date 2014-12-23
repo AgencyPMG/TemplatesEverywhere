@@ -29,5 +29,12 @@ function pmg_templateseverywhere_types()
 
 function pmg_templateseverywhere_finder()
 {
-    return new TE\Finder\ThemeTemplateFinder();
+    $default = new TE\Finder\CachingFinder(new TE\Finder\ThemeFinder());
+
+    $finder = apply_filters('pmg_templateseverywhere_finder', $default);
+    if (!$finder instanceof TE\Finder\TemplateFinder) {
+        $finder = $default;
+    }
+
+    return $finder;
 }

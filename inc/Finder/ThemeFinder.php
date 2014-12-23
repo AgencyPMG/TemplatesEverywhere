@@ -16,7 +16,7 @@ namespace PMG\TemplatesEverywhere\Finder;
  *
  * @since   1.0
  */
-final class ThemeTemplateFinder implements TemplateFinder
+final class ThemeFinder implements TemplateFinder
 {
     /**
      * The theme where templates will be found.
