@@ -37,6 +37,10 @@
 
 !defined('ABSPATH') && exit;
 
-require __DIR__.'/inc/core.php';
+require_once __DIR__.'/inc/Finder/TemplateFinder.php';
+require_once __DIR__.'/inc/Finder/ThemeTemplateFinder.php';
+require_once __DIR__.'/inc/Hooks.php';
+require_once __DIR__.'/inc/Admin.php';
+require_once __DIR__.'/inc/core.php';
 
 add_action('plugins_loaded', 'pmg_templateseverywhere_load');

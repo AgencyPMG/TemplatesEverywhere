@@ -8,7 +8,24 @@
  * @license     http://opensource.org/licenses/mit MIT
  */
 
+use PMG\TemplatesEverywhere as TE;
+
 function pmg_templateseverywhere_load()
 {
-    
+    if (is_admin()) {
+        TE\Admin::init();
+    }
+}
+
+function pmg_templateseverywhere_types()
+{
+    return apply_filters('pmg_templates_everywhere_types', get_post_types(array(
+        'public'    => true,
+        '_builtin'  => false,
+    ), 'names'));
+}
+
+function pmg_templateseverywhere_finder()
+{
+    return new TE\Finder\ThemeTemplateFinder();
 }
